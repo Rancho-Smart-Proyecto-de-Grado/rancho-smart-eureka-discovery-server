@@ -1,12 +1,17 @@
 spring:
   application:
     name: eureka-discovery-server
+
 eureka:
   client:
-    register-with-eureka: false
+    register-with-eureka: true
     fetch-registry: false
   server:
     enable-self-preservation: true
+  instance:
+    preferIpAddress: false
+    hostname: eureka-server
+    instance-id: eureka-server
 
 server:
   port: ${SERVER_PORT_EUREKA}
